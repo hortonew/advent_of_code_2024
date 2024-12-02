@@ -3,11 +3,11 @@ pub fn run() {
 
     // 1a
     let total_distance = calculate_total_distance(&left_vec, &right_vec);
-    println!("Total distance: {}", total_distance);
+    println!("Day 1: Total distance: {}", total_distance);
 
     // 1b
     let similarity_score = calculate_similarity_score(&left_vec, &right_vec);
-    println!("Similarity score: {}", similarity_score);
+    println!("Day 1: Similarity score: {}", similarity_score);
 }
 
 fn process_file(file: &str) -> (std::vec::Vec<i32>, std::vec::Vec<i32>) {
