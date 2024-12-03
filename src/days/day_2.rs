@@ -86,15 +86,23 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_num_of_reports_safe() {
+    fn test_2_example_a() {
         assert_eq!(num_of_reports_safe("src/days/inputs/2_test.txt"), 2);
     }
-
     #[test]
-    fn test_num_of_reports_safe_with_problem_dampener() {
+    fn test_2_example_b() {
         assert_eq!(
             num_of_reports_safe_with_problem_dampener("src/days/inputs/2_test.txt"),
             4
         );
+    }
+
+    #[test]
+    fn test_2_a() {
+        assert_eq!(num_of_reports_safe("src/days/inputs/2.txt"), 663);
+    }
+    #[test]
+    fn test_2_b() {
+        assert_eq!(num_of_reports_safe_with_problem_dampener("src/days/inputs/2.txt"), 692);
     }
 }

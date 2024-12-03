@@ -57,16 +57,30 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_calculate_total_distance() {
+    fn test_1_example_a() {
         let (left_vec, right_vec) = process_file("src/days/inputs/1_test.txt");
         let total_distance = calculate_total_distance(&left_vec, &right_vec);
         assert_eq!(total_distance, 11);
     }
 
     #[test]
-    fn test_calculate_similarity_score() {
+    fn test_1_example_b() {
         let (left_vec, right_vec) = process_file("src/days/inputs/1_test.txt");
         let similarity_score = calculate_similarity_score(&left_vec, &right_vec);
         assert_eq!(similarity_score, 31);
+    }
+
+    #[test]
+    fn test_1_a() {
+        let (left_vec, right_vec) = process_file("src/days/inputs/1.txt");
+        let total_distance = calculate_total_distance(&left_vec, &right_vec);
+        assert_eq!(total_distance, 1110981);
+    }
+
+    #[test]
+    fn test_1_b() {
+        let (left_vec, right_vec) = process_file("src/days/inputs/1.txt");
+        let similarity_score = calculate_similarity_score(&left_vec, &right_vec);
+        assert_eq!(similarity_score, 24869388);
     }
 }
