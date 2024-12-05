@@ -8,15 +8,13 @@ pub fn run() {
 
 fn word_search(file: &str) -> i32 {
     // convert lines to vectors
-
     let input = std::fs::read_to_string(file).expect("File doesn't exist");
     let grid: Vec<&str> = input.lines().collect();
 
-    let mut total_matches = 0;
     let word = "XMAS";
-    total_matches = search_grid(&grid, word);
-    let word = "SAMX";
-    total_matches += search_grid(&grid, word);
+    let mut total_matches = search_grid(&grid, word);
+    let word: String = word.chars().rev().collect();
+    total_matches += search_grid(&grid, &word);
     total_matches as i32
 }
 
